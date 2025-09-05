@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import Quiz from "./components/Quiz.jsx";
 import Results from "./components/Results.jsx";
+import Feedback from "./components/Feedback.jsx"; // ✅ Import Feedback
 import questions from "./data/questions.js";
 
 function App() {
@@ -55,9 +56,9 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-blue-50 p-4">
+    <div className="min-h-screen flex flex-col items-center justify-center bg-blue-50 p-4">
       {!difficulty ? (
-        <div className="bg-white p-6 rounded-2xl shadow-2xl text-center space-y-6">
+        <div className="bg-white p-6 rounded-2xl shadow-2xl text-center space-y-6 w-full max-w-xl">
           <h1 className="text-4xl font-bold text-blue-700">REACT QUIZ APP</h1>
           <p className="text-lg font-semibold">Select Difficulty:</p>
           <div className="flex flex-wrap justify-center gap-6">
@@ -80,13 +81,19 @@ function App() {
           onAnswer={handleAnswer}
         />
       ) : (
-        <Results
-          score={score}
-          total={questionSet.length}
-          userAnswers={userAnswers}
-          restart={restartQuiz}
-          highScore={highScore}
-        />
+        <div className="space-y-6 w-full max-w-xl">
+          {/* Quiz Results */}
+          <Results
+            score={score}
+            total={questionSet.length}
+            userAnswers={userAnswers}
+            restart={restartQuiz}
+            highScore={highScore}
+          />
+
+          {/* Feedback Form */}
+          <Feedback />
+        </div>
       )}
     </div>
   );

@@ -51,7 +51,7 @@ Run the app locally:
 npm run dev
 
 
-Open your browser at the URL shown (usually http://localhost:5173) to start the quiz.
+Open your browser at the URL shown (usually http://localhost:5178) to start the quiz.
 
 Tech Stack
 
