@@ -1,6 +1,5 @@
- 
 React Quiz App
-Overview
+Overview: 
 React Quiz App is a fun and interactive web application built with React and Tailwind CSS. It allows users to test their knowledge with multiple-choice questions across different difficulty levels: Easy, Medium, and Hard.
 The app is colorful, responsive, and includes a 30-second timer, progress tracking, and a high score feature.
 
